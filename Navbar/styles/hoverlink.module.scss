@@ -1,0 +1,25 @@
+@mixin notHovered {
+    color: red;   
+    text-decoration: none;
+}
+
+@mixin hovered {
+  color: blue;
+  text-decoration: underline;
+  background-color: white;
+}
+
+.hoverable {
+ @include notHovered;
+ border-radius:20px;
+ padding:15px;
+ font-size:24px;
+ transition: 0.4s, font-size 1ms, border-radius 1ms, padding 1ms, text-decoration 1ms;
+    &:hover{
+        @include hovered;
+    }
+}
+
+.selected {
+    color: 'red';
+}
