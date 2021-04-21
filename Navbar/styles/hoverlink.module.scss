@@ -6,17 +6,28 @@
 @mixin hovered {
   color: blue!important;
   text-decoration: none;
-  background-color: #ffbd59a6!important;
+  border-color:black;
+  border-width: 1px;
+  border-top-style:solid;
+  border-bottom-style:solid;
+  background-color:white!important;  
+  
+}
+@mixin active {
+    background-color: #ffbd59a6!important;
 }
 
 .hoverable {
  @include notHovered;
- border-radius:20px;
+ border-radius:5px;
  padding:15px;
  font-size:24px;
- transition: 0.4s, font-size 1ms, border-radius 1ms, padding 1ms, text-decoration 1ms;
+ transition: 0.4s, font-size 1ms, border-radius 1ms, padding 1ms, text-decoration 1ms, background-color 0ms;
     &:hover{
         @include hovered;
+    }
+    &:active{
+        @include active;
     }
 }
 
