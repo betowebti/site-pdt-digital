@@ -4,9 +4,9 @@
 }
 
 @mixin hovered {
-  color: blue;
-  text-decoration: underline;
-  background-color: white;
+  color: blue!important;
+  text-decoration: none;
+  background-color: #ffbd59a6!important;
 }
 
 .hoverable {
@@ -21,5 +21,5 @@
 }
 
 .selected {
-    color: 'red';
+    color: #ffbd59!important;
 }

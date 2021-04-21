@@ -1,26 +1,12 @@
 @mixin logo {
-    position:absolute;
-    top:0;
-    left:0;
-    width: 100px;
-    height: 65px;
-    display: block;
+    width: 200px;
+    height: 130px;
+    display: grid;
+    align-content: center;
     background: url('/logo.png') no-repeat center;
     background-size: contain;
 }
 
 .logo {
     @include logo;
-}
-
-@media (max-width: 991px) {
-    .logo {
-        left:45%!important;
-    }
-}
-
-.fit {
-    width: 8rem;
-    height: 4rem;
-    margin: 0;
 }
